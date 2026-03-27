@@ -1,20 +1,20 @@
 import { NavLink } from "react-router";
 
-let iconsTabStyle = "text-xs flex hover:cursor-pointer ";
+let iconsTabStyle = "text-xs flex p-1 hover:cursor-pointer";
 
 let spanStyle = "ml-5 self-center overflow-hidden";
 
 export default function DesktopNavbar() {
   return (
     <>
-      <nav className="bg-black group w-[5%] fixed left-0 top-0 bottom-0 p-3 hidden  transition-all duration-700 hover:w-[12%] md:flex md:flex-col">
+      <nav className="bg-slate-950 group w-[5%] fixed left-0 top-0 bottom-0 p-3 z-1 hidden  transition-all duration-700 hover:w-[15%] md:flex md:flex-col">
         {/* Navigation tabs */}
-        <div className="container mx-auto h-full flex flex-col justify-center gap-12 ">
+        <div className="container mx-auto h-full flex flex-col justify-center gap-6">
           {/* Home icon tab */}
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
             }
           >
             <svg
@@ -23,7 +23,7 @@ export default function DesktopNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-7 shrink-0"
+              className="size-6 shrink-0"
             >
               <path
                 strokeLinecap="round"
@@ -39,7 +39,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/experience"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
             }
           >
             <svg
@@ -48,7 +48,7 @@ export default function DesktopNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-7 shrink-0"
+              className="size-6 shrink-0"
             >
               <path
                 strokeLinecap="round"
@@ -65,7 +65,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
             }
           >
             <svg
@@ -74,7 +74,7 @@ export default function DesktopNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-7 shrink-0"
+              className="size-6 shrink-0"
             >
               <path
                 strokeLinecap="round"
@@ -91,7 +91,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
             }
           >
             <svg
@@ -100,7 +100,7 @@ export default function DesktopNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-7 shrink-0"
+              className="size-6 shrink-0"
             >
               <path
                 strokeLinecap="round"

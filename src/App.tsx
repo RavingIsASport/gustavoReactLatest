@@ -8,10 +8,10 @@ import DesktopNavbar from "./components/DesktopNavbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <MobileNavbar />
       <DesktopNavbar />
-      <main className="md:fixed md:left-[4.5%]">
+      <main className="px-3 md:fixed md:left-15">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
