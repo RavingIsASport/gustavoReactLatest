@@ -10,7 +10,7 @@ let activeTabStyle = (a: any) =>
 export default function DesktopNavbar() {
   return (
     <>
-      <nav className="bg-stone-950/10 hover:backdrop-blur-xs group w-16.25 fixed left-0 top-0 bottom-0 p-3 border-r border-stone-500 z-2 hidden  transition-all duration-700 hover:w-[25%] lg:hover:w-[20%] md:flex md:flex-col">
+      <nav className="bg-stone-950/50 hover:backdrop-blur-sm group w-16.25 fixed left-0 top-0 bottom-0 p-3 border-r border-stone-500 z-2 hidden  transition-all duration-700 hover:w-[25%] lg:hover:w-[20%] md:flex md:flex-col">
         {/* Navigation tabs */}
         <div className="container mx-auto h-full flex flex-col justify-center gap-6">
           {/* Home icon tab */}
