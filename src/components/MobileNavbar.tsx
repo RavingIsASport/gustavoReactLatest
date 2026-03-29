@@ -1,19 +1,22 @@
 import { NavLink } from "react-router";
 
-let iconsTabStyle = "flex flex-col items-center gap-1 hover:cursor-pointer ";
+let iconsTabStyle =
+  "text-xs flex flex-col items-center gap-1 hover:cursor-pointer ";
+
+let activeIconStyle = (a: any) => (a ? "text-red-500" : "text-stone-300");
 
 export default function MobileNavbar() {
   return (
     <>
       {/* Navigation Mobile bar */}
-      <nav className="bg-slate-950 text-white p-4 fixed bottom-0 right-0 left-0 md:hidden">
+      <nav className="bg-stone-950 p-4 border-t border-stone-500 fixed bottom-0 right-0 left-0 md:hidden">
         {/* Navigation tabs */}
         <div className="container mx-auto flex justify-around items-center ">
           {/* Home icon tab */}
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `${iconsTabStyle} ${activeIconStyle(isActive)}`
             }
           >
             <svg
@@ -38,7 +41,7 @@ export default function MobileNavbar() {
           <NavLink
             to="/experience"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `${iconsTabStyle} ${activeIconStyle(isActive)}`
             }
           >
             <svg
@@ -64,7 +67,7 @@ export default function MobileNavbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `${iconsTabStyle} ${activeIconStyle(isActive)}`
             }
           >
             <svg
@@ -90,7 +93,7 @@ export default function MobileNavbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700" : "text-white"}`
+              `${iconsTabStyle} ${activeIconStyle(isActive)}`
             }
           >
             <svg

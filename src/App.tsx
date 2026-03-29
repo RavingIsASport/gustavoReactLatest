@@ -5,10 +5,12 @@ import About from "./Pages/About";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
 import DesktopNavbar from "./components/DesktopNavbar";
+import ProfileLinks from "./components/ProfileLinks";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-stone-950  min-h-screen">
+      <ProfileLinks />
       <MobileNavbar />
       <DesktopNavbar />
       <main className="px-3 md:fixed md:left-15">

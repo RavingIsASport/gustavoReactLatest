@@ -1,20 +1,23 @@
 import { NavLink } from "react-router";
 
-let iconsTabStyle = "text-xs flex p-1 hover:cursor-pointer";
+let iconsTabStyle = "text-xs flex p-2 hover:cursor-pointer";
 
 let spanStyle = "ml-5 self-center overflow-hidden";
+
+let activeTabStyle = (a: any) =>
+  a.isActive ? "text-red-500 bg-red-200/20 rounded" : "text-stone-300";
 
 export default function DesktopNavbar() {
   return (
     <>
-      <nav className="bg-slate-950 group w-[5%] fixed left-0 top-0 bottom-0 p-3 z-1 hidden  transition-all duration-700 hover:w-[15%] md:flex md:flex-col">
+      <nav className="bg-stone-950/10 hover:backdrop-blur-xs group w-16.25 fixed left-0 top-0 bottom-0 p-3 border-r border-stone-500 z-2 hidden  transition-all duration-700 hover:w-[25%] lg:hover:w-[20%] md:flex md:flex-col">
         {/* Navigation tabs */}
         <div className="container mx-auto h-full flex flex-col justify-center gap-6">
           {/* Home icon tab */}
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
+              `${iconsTabStyle} ${activeTabStyle({ isActive })}`
             }
           >
             <svg
@@ -39,7 +42,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/experience"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${activeTabStyle({ isActive })}`
             }
           >
             <svg
@@ -65,7 +68,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${activeTabStyle({ isActive })}`
             }
           >
             <svg
@@ -91,7 +94,7 @@ export default function DesktopNavbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `text-xs ${iconsTabStyle} ${isActive ? "text-red-700 bg-red-100/60 rounded" : "text-white"}`
+              `text-xs ${iconsTabStyle} ${activeTabStyle({ isActive })}`
             }
           >
             <svg
