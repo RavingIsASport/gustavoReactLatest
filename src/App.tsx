@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router";
-import MobileNavbar from "./components/MobileNavbar";
+import MobileNavbar from "./components/Global/MobileNavbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Experience from "./Pages/Experience";
 import Contact from "./Pages/Contact";
-import DesktopNavbar from "./components/DesktopNavbar";
-import ProfileLinks from "./components/ProfileLinks";
+import DesktopNavbar from "./components/Global/DesktopNavbar";
+import ProfileLinks from "./components/Global/ProfileLinks";
 
 function App() {
   return (
