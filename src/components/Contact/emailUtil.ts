@@ -1,3 +1,5 @@
+import { Meta } from "react-router";
+
 export interface EmailData {
   name: string;
   email: string;
@@ -6,7 +8,7 @@ export interface EmailData {
 }
 
 export const sendEmail = async (data: EmailData) => {
-  let response = await fetch("/api/email", {
+  let response = await fetch(import.meta.env.VITE_BACKEND_URL + "/api/email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
