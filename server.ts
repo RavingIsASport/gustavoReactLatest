@@ -5,25 +5,25 @@ const app = new Elysia();
 const resend = new Resend(Bun.env.VITE_RESEND_API_KEY);
 
 // Define a route to handle email data sent from the frontend
-app.post("/api/email", async (ctx: { body: any }) => {
+app.post("/api/email", async (ctx) => {
   // Getting data from the request body
-  const data = await ctx.body;
+  const data: any = await ctx.body;
 
   // Console log the received email data for debugging purposes
   console.log("Received email data:", data);
 
-  await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: Bun.env.VITE_EMAIL!,
-    subject: data.subject || "New Message from Contact From" + data.name,
-    html: `
-          <h2><strong>Name:</strong> ${data.name}</h2>
-          <p><strong>Reply-to Email:</strong> ${data.email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${data.message}</p>
-          `,
-    replyTo: data.email,
-  });
+  // await resend.emails.send({
+  //   from: "onboarding@resend.dev",
+  //   to: Bun.env.VITE_EMAIL!,
+  //   subject: data.subject || "New Message from Contact From" + data.name,
+  //   html: `
+  //         <h2><strong>Name:</strong> ${data.name}</h2>
+  //         <p><strong>Reply-to Email:</strong> ${data.email}</p>
+  //         <p><strong>Message:</strong></p>
+  //         <p>${data.message}</p>
+  //         `,
+  //   replyTo: data.email,
+  // });
 
   // Here you can add logic to send the email using a service like nodemailer or an email API
   return { message: "Email data received successfully at backend", data };
