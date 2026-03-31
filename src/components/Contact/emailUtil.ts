@@ -6,7 +6,7 @@ export interface EmailData {
 }
 
 export const sendEmail = async (data: EmailData) => {
-  let response = await fetch(import.meta.env.VITE_BACKEND_URL + "/api/email", {
+  let response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/email`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
