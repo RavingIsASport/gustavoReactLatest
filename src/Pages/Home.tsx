@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex flex-col items-start gap-4 mx-3 mt-25">
+    <div className="flex flex-col items-start gap-4">
       <p className="text-stone-300 font-mono text-[12px] tracking-[0.3em] mb-6">
         // Full Stack Developer
       </p>

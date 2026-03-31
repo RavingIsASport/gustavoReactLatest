@@ -2,7 +2,7 @@ import EmailForm from "../components/Contact/EmailForm";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col mt-25 mx-5 gap-6">
+    <div className="flex flex-col gap-6 ">
       {/* top section */}
       <section className="flex gap-2 mb-6">
         <span className="rounded-full self-center bg-rose-500 w-2 h-2"></span>
@@ -21,7 +21,7 @@ export default function Contact() {
       </p>
 
       {/* contact form */}
-      <section className="mt-10 border border-stone-700 rounded-lg p-6 w-full mb-28">
+      <section className="mt-10 border border-stone-700 rounded-lg p-6 w-full mb-28 md:mx-auto md:w-3/4 lg:w-1/2">
         <div className="flex items-center gap-2 mb-10 border-b border-stone-700 pb-8">
           <span className="rounded-full bg-rose-500 w-2 h-2"></span>
           <span className="rounded-full bg-yellow-500 w-2 h-2"></span>

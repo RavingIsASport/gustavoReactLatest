@@ -9,9 +9,9 @@ export default function MobileNavbar() {
   return (
     <>
       {/* Navigation Mobile bar */}
-      <nav className="bg-stone-950 p-4 border-t border-stone-500 fixed bottom-0 right-0 left-0 md:hidden">
+      <nav className="bg-stone-950 p-4 border-t border-stone-500 fixed bottom-0 left-0 right-0 md:hidden">
         {/* Navigation tabs */}
-        <div className="container mx-auto flex justify-around items-center ">
+        <div className=" mx-auto flex justify-around items-center ">
           {/* Home icon tab */}
           <NavLink
             to="/"
