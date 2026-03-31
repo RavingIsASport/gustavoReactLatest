@@ -5,8 +5,6 @@ export interface EmailData {
   message: string;
 }
 
-// const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
-
 export const sendEmail = async (data: EmailData) => {
   let response = await fetch("/api/email", {
     method: "POST",

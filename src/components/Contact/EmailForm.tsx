@@ -7,6 +7,7 @@ let inputStyle =
   "text-stone-300 border border-stone-300 rounded-md p-2 bg-stone-800  focus:outline-none focus:border-rose-500";
 
 export default function EmailForm() {
+  // TODO: Add form validation and error handling
   async function handleSubmit(event: any): Promise<void> {
     event.preventDefault();
 
@@ -20,6 +21,7 @@ export default function EmailForm() {
     };
 
     try {
+      // TODO: Add loading state and success/error feedback to the user
       let res = await sendEmail(data);
       console.log("Email sent successfully", res);
     } catch (error) {
