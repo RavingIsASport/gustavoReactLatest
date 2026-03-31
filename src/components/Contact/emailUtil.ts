@@ -1,5 +1,3 @@
-import { Meta } from "react-router";
-
 export interface EmailData {
   name: string;
   email: string;
