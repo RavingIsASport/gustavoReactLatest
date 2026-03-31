@@ -1,7 +1,9 @@
 import { Elysia, t } from "elysia";
 import { Resend } from "resend";
+import { cors } from "@elysiajs/cors";
 
 const app = new Elysia();
+app.use(cors());
 const resend = new Resend(Bun.env.VITE_RESEND_API_KEY);
 
 // Define a route to handle email data sent from the frontend
