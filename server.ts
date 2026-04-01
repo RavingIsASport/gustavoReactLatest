@@ -3,7 +3,12 @@ import { Resend } from "resend";
 import { cors } from "@elysiajs/cors";
 
 const app = new Elysia();
-app.use(cors());
+app.use(
+  cors({
+    origin: Bun.env.VITE_FRONTEND_URL,
+    credentials: true,
+  }),
+);
 const resend = new Resend(Bun.env.VITE_RESEND_API_KEY);
 
 // Define a route to handle email data sent from the frontend
