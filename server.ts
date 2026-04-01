@@ -9,6 +9,8 @@ const app = new Elysia()
     cors({
       origin: Bun.env.VITE_FRONTEND_URL,
       credentials: true,
+      allowedHeaders: ["Content-Type", "Authorization"],
+      preflight: true,
     }),
   )
   // Define a route to handle email data sent from the frontend
