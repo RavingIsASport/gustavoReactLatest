@@ -7,6 +7,7 @@ app.use(
   cors({
     origin: Bun.env.VITE_FRONTEND_URL,
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 const resend = new Resend(Bun.env.VITE_RESEND_API_KEY);
