@@ -7,10 +7,12 @@ import Contact from "./Pages/Contact";
 import DesktopNavbar from "./components/Global/DesktopNavbar";
 import ProfileLinks from "./components/Global/ProfileLinks";
 import Footer from "./components/Global/Footer";
+import ScrollToTop from "./components/Global/ScrollToTop";
 
 function App() {
   return (
     <div className="bg-stone-950 min-h-screen">
+      <ScrollToTop />
       <ProfileLinks />
       <MobileNavbar />
       <DesktopNavbar />
