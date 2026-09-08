@@ -76,23 +76,33 @@ export const skills = [
 export const certifications = [
   {
     name: "WGU Verified Badge",
+    issuer: "Western Governors University",
     url: "https://badges.parchment.com/public/assertions/oQCM8EGgSSW0wbMEEdCrcg?identity__email=ggar428%40wgu.edu",
+    credlyId: null,
   },
   {
-    name: "Southern Methodist University Full Stack Web Development Certificate (Coding Boot Camp)",
+    name: "Full Stack Web Development Certificate",
+    issuer: "Southern Methodist University (Coding Boot Camp)",
     url: "https://www.credly.com/badges/93c820c1-53f3-4247-bb69-f2ff265dd923/public_url",
+    credlyId: "93c820c1-53f3-4247-bb69-f2ff265dd923",
   },
   {
     name: "CompTIA Project+",
+    issuer: "CompTIA",
     url: "https://www.credly.com/badges/99e47477-8b7c-4a46-9f4d-b857e530479f/public_url",
+    credlyId: "99e47477-8b7c-4a46-9f4d-b857e530479f",
   },
   {
     name: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
     url: "https://www.credly.com/badges/03e56dab-b756-48b9-a264-85fdbb738675/public_url",
+    credlyId: "03e56dab-b756-48b9-a264-85fdbb738675",
   },
   {
     name: "ITIL4 Foundation",
+    issuer: "AXELOS",
     url: null,
+    credlyId: null,
   },
 ];
 

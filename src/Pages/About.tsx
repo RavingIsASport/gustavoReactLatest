@@ -1,5 +1,7 @@
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
 import SectionHeader from "../components/Global/SectionHeader";
+import CredlyBadge from "../components/About/CredlyBadge";
 import { summary, skills, certifications } from "../data/resume";
 
 export default function About() {
@@ -45,27 +47,43 @@ export default function About() {
         <h2 className="text-stone-100 font-bold text-xl mb-6">
           Certifications
         </h2>
-        <ul className="flex flex-col gap-3">
+        <div className="flex flex-wrap items-start gap-6">
           {certifications.map((cert) => (
-            <li
+            <div
               key={cert.name}
-              className="flex items-center justify-between gap-4 border-b border-stone-800 pb-3"
+              className="flex flex-col items-center text-center gap-3 border border-stone-800 rounded-lg p-4 w-[180px] hover:border-stone-700 transition-colors"
             >
-              <span className="text-stone-300 text-sm">{cert.name}</span>
+              {cert.credlyId ? (
+                <CredlyBadge badgeId={cert.credlyId} />
+              ) : (
+                <div className="flex items-center justify-center w-[100px] h-[100px] rounded-full bg-stone-800/70 border border-stone-700">
+                  <HiOutlineAcademicCap className="text-rose-500 text-4xl" />
+                </div>
+              )}
+
+              <div className="flex flex-col gap-1">
+                <p className="text-stone-200 text-xs font-bold leading-snug">
+                  {cert.name}
+                </p>
+                <p className="text-stone-500 text-[11px] font-mono">
+                  {cert.issuer}
+                </p>
+              </div>
+
               {cert.url && (
                 <a
                   href={cert.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-1 text-rose-500 hover:text-rose-400 font-mono text-xs whitespace-nowrap"
+                  className="flex items-center gap-1 text-rose-500 hover:text-rose-400 font-mono text-[11px] whitespace-nowrap"
                 >
                   View Credential
                   <HiOutlineExternalLink />
                 </a>
               )}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
