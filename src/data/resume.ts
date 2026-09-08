@@ -79,30 +79,37 @@ export const certifications = [
     issuer: "Western Governors University",
     url: "https://badges.parchment.com/public/assertions/oQCM8EGgSSW0wbMEEdCrcg?identity__email=ggar428%40wgu.edu",
     credlyId: null,
+    imageUrl:
+      "https://badges.parchment.com/public/assertions/oQCM8EGgSSW0wbMEEdCrcg/image",
   },
   {
     name: "Full Stack Web Development Certificate",
     issuer: "Southern Methodist University (Coding Boot Camp)",
     url: "https://www.credly.com/badges/93c820c1-53f3-4247-bb69-f2ff265dd923/public_url",
     credlyId: "93c820c1-53f3-4247-bb69-f2ff265dd923",
+    imageUrl: null,
   },
   {
     name: "CompTIA Project+",
     issuer: "CompTIA",
     url: "https://www.credly.com/badges/99e47477-8b7c-4a46-9f4d-b857e530479f/public_url",
     credlyId: "99e47477-8b7c-4a46-9f4d-b857e530479f",
+    imageUrl: null,
   },
   {
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     url: "https://www.credly.com/badges/03e56dab-b756-48b9-a264-85fdbb738675/public_url",
     credlyId: "03e56dab-b756-48b9-a264-85fdbb738675",
+    imageUrl: null,
   },
   {
     name: "ITIL4 Foundation",
     issuer: "AXELOS",
-    url: null,
+    url: "https://badges.peoplecert.org/Badge/en/1360D1D5-1AFF-4F81-A8C2-6BDFB4B5ECFF",
     credlyId: null,
+    imageUrl:
+      "https://badges.peoplecert.org/Badges/Template/en/180/ec721fda-bb43-434e-8ef8-e99f8c748ee4",
   },
 ];
 

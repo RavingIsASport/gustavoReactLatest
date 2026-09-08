@@ -58,7 +58,7 @@ export default function Experience() {
 
       {/* Education */}
       <div className="mt-10">
-        <h2 className="text-stone-100 font-bold text-xl mb-6">Education</h2>
+        <h2 className="text-stone-100 font-bold text-2xl mb-6">Education</h2>
         <div className="flex flex-col gap-6">
           {education.map((school) => (
             <div

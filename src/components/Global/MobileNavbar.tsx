@@ -9,7 +9,7 @@ export default function MobileNavbar() {
   return (
     <>
       {/* Navigation Mobile bar */}
-      <nav className="bg-stone-950 p-4 border-t border-stone-500 fixed bottom-0 left-0 right-0 z-50 md:hidden">
+      <nav className="bg-stone-950 p-3 border-t border-stone-500 fixed bottom-0 left-0 right-0 z-50 md:hidden">
         {/* Navigation tabs */}
         <div className=" mx-auto flex justify-around items-center ">
           {/* Home icon tab */}
@@ -25,7 +25,7 @@ export default function MobileNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5"
+              className="size-4"
             >
               <path
                 strokeLinecap="round"
@@ -50,7 +50,7 @@ export default function MobileNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5"
+              className="size-4"
             >
               <path
                 strokeLinecap="round"
@@ -76,7 +76,7 @@ export default function MobileNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5"
+              className="size-4"
             >
               <path
                 strokeLinecap="round"
@@ -102,7 +102,7 @@ export default function MobileNavbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5"
+              className="size-4"
             >
               <path
                 strokeLinecap="round"

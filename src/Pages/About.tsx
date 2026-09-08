@@ -16,9 +16,9 @@ export default function About() {
       </p>
 
       {/* Skills */}
-      <div className="mt-10">
+      <div className="mt-22">
         <h2 className="text-stone-100 font-bold text-xl mb-6">Skills</h2>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 mt-10 md:grid-cols-2">
           {skills.map((group) => (
             <div
               key={group.category}
@@ -43,25 +43,35 @@ export default function About() {
       </div>
 
       {/* Certifications */}
-      <div className="mt-6">
+      <div className="mt-22">
         <h2 className="text-stone-100 font-bold text-xl mb-6">
           Certifications
         </h2>
-        <div className="flex flex-wrap items-start gap-6">
+        <div className="grid grid-cols-2 gap-6 my-10 md:grid-cols-3 lg:grid-cols-4">
           {certifications.map((cert) => (
             <div
               key={cert.name}
-              className="flex flex-col items-center text-center gap-3 border border-stone-800 rounded-lg p-4 w-[180px] hover:border-stone-700 transition-colors"
+              className="flex flex-col items-center text-center gap-3 border border-stone-800 rounded-lg p-4 w-[180px] md:w-auto hover:border-stone-700 transition-colors"
             >
               {cert.credlyId ? (
                 <CredlyBadge badgeId={cert.credlyId} />
               ) : (
-                <div className="flex items-center justify-center w-[100px] h-[100px] rounded-full bg-stone-800/70 border border-stone-700">
-                  <HiOutlineAcademicCap className="text-rose-500 text-4xl" />
+                // <div className="flex items-center justify-center w-[100px] h-[100px] rounded-full bg-stone-800/70 border border-stone-700">
+                //   <HiOutlineAcademicCap className="text-rose-500 text-4xl" />
+                // </div>
+                <div>
+                  <a href={cert.url} target="_blank" rel="noreferrer">
+                    <img
+                      width="130px"
+                      height="120px"
+                      src={cert.imageUrl ? cert.imageUrl : ""}
+                      alt={cert.name}
+                    />
+                  </a>
                 </div>
               )}
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-2">
                 <p className="text-stone-200 text-xs font-bold leading-snug">
                   {cert.name}
                 </p>
@@ -75,7 +85,7 @@ export default function About() {
                   href={cert.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-1 text-rose-500 hover:text-rose-400 font-mono text-[11px] whitespace-nowrap"
+                  className="flex mt-auto items-center gap-1 text-rose-500 hover:text-rose-400 font-mono text-[11px] whitespace-nowrap"
                 >
                   View Credential
                   <HiOutlineExternalLink />

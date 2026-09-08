@@ -23,18 +23,18 @@ const stats = [
 ];
 
 const techStack = [
-  { name: "React", icon: SiReact },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "Express", icon: SiExpress },
-  { name: "Angular", icon: SiAngular },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "MySQL", icon: SiMysql },
-  { name: "GraphQL", icon: SiGraphql },
-  { name: "TailwindCSS", icon: SiTailwindcss },
-  { name: "AWS", icon: FaAws },
-  { name: "Docker", icon: SiDocker },
-  { name: "Git", icon: SiGit },
+  { name: "React", icon: SiReact, color: "text-blue-500" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+  { name: "Express", icon: SiExpress, color: "text-green-400" },
+  { name: "Angular", icon: SiAngular, color: "text-red-500" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+  { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
+  { name: "GraphQL", icon: SiGraphql, color: "text-purple-500" },
+  { name: "TailwindCSS", icon: SiTailwindcss, color: "text-cyan-500" },
+  { name: "AWS", icon: FaAws, color: "text-orange-500" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-400" },
+  { name: "Git", icon: SiGit, color: "text-orange-500" },
 ];
 
 export default function Home() {
@@ -44,29 +44,29 @@ export default function Home() {
         // Full Stack Software Engineer
       </p>
 
-      <h1 className="text-5xl md:text-6xl font-bold text-stone-100 leading-[1.1]">
+      <h1 className="text-6xl md:text-7xl font-bold text-stone-100 leading-[1.1]">
         Hi,
         <br />
         I'm <span className="text-rose-500">Gustavo</span>.
       </h1>
 
-      <p className="text-stone-300 text-md font-mono mt-4">
+      <p className="text-stone-300 text-sm font-mono mt-4 md:text-xl">
         I build web applications with{" "}
         <span className="text-sky-300">React</span>,{" "}
         <span className="text-emerald-500">Node.js</span>, and{" "}
         <span className="text-blue-400">TypeScript</span>.
       </p>
 
-      <p className="text-stone-400 text-sm leading-7 mt-6 max-w-2xl">
+      <p className="text-stone-400 text-sm leading-7 mt-10 max-w-2xl">
         Motivated and detail-oriented software developer with hands-on
-        experience building full-stack web applications using JavaScript,
-        React, Angular, Node.js, and Express. Comfortable working across the
-        stack with MySQL and MongoDB, turning ideas into functional,
-        user-focused solutions — and always looking to solve complex problems
-        with clean, maintainable code.
+        experience building full-stack web applications using JavaScript, React,
+        Angular, Node.js, and Express. Comfortable working across the stack with
+        MySQL and MongoDB, turning ideas into functional, user-focused solutions
+        — and always looking to solve complex problems with clean, maintainable
+        code.
       </p>
 
-      <div className="flex flex-wrap gap-4 mt-8">
+      <div className="flex flex-wrap gap-4 mt-10">
         <Link
           to="/experience"
           className="flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-stone-100 font-bold font-mono text-sm py-3 px-6 rounded-md transition-colors"
@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Tech Stack */}
-      <div className="w-full mt-16 border-t border-stone-800 pt-10">
+      <div className="w-full mt-16 border-t border-stone-800 py-22">
         <p className="text-stone-500 font-mono text-[11px] tracking-[0.2em] uppercase mb-6">
           Tools &amp; Technologies
         </p>
@@ -106,7 +106,7 @@ export default function Home() {
               key={tech.name}
               className="flex flex-col items-center justify-center gap-2 border border-stone-800 rounded-lg py-5 hover:border-stone-700 hover:bg-stone-900/50 transition-colors"
             >
-              <tech.icon className="text-2xl text-stone-300" />
+              <tech.icon className={`text-2xl ${tech.color}`} />
               <span className="text-stone-500 text-[11px] font-mono">
                 {tech.name}
               </span>
@@ -116,7 +116,7 @@ export default function Home() {
       </div>
 
       {/* Featured Experience */}
-      <div className="w-full mt-16 border-t border-stone-800 pt-10">
+      <div className="w-full mt-16 border-t border-stone-800 py-20">
         <div className="flex items-center justify-between mb-6">
           <p className="text-stone-500 font-mono text-[11px] tracking-[0.2em] uppercase">
             Recent Work
@@ -130,7 +130,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 w-full">
+        <div className="grid gap-16 md:grid-cols-2 w-full">
           {experience.map((job) => (
             <div
               key={job.company}
