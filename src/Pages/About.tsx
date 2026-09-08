@@ -1,5 +1,4 @@
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { HiOutlineAcademicCap } from "react-icons/hi2";
 import SectionHeader from "../components/Global/SectionHeader";
 import CredlyBadge from "../components/About/CredlyBadge";
 import { summary, skills, certifications } from "../data/resume";
