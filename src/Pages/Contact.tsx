@@ -1,8 +1,4 @@
-import {
-  HiOutlineMail,
-  HiOutlinePhone,
-  HiOutlineGlobeAlt,
-} from "react-icons/hi";
+import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import EmailForm from "../components/Contact/EmailForm";
 import SectionHeader from "../components/Global/SectionHeader";
 import { contact } from "../data/resume";
