@@ -1,4 +1,8 @@
-import { HiOutlineMail, HiOutlinePhone, HiOutlineGlobeAlt } from "react-icons/hi";
+import {
+  HiOutlineMail,
+  HiOutlinePhone,
+  HiOutlineGlobeAlt,
+} from "react-icons/hi";
 import EmailForm from "../components/Contact/EmailForm";
 import SectionHeader from "../components/Global/SectionHeader";
 import { contact } from "../data/resume";
@@ -31,15 +35,6 @@ export default function Contact() {
         >
           <HiOutlinePhone className="text-rose-500" />
           {contact.phone}
-        </a>
-        <a
-          href={`https://${contact.site}`}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 text-stone-300 hover:text-rose-400 transition-colors"
-        >
-          <HiOutlineGlobeAlt className="text-rose-500" />
-          {contact.site}
         </a>
       </div>
 

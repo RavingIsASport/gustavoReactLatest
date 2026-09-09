@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Gustavo Garcia — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live site:** https://gustavoreactlatest-production-cebf.up.railway.app/
 
-Currently, two official plugins are available:
+Personal portfolio for Gustavo Garcia, a Full Stack Software Engineer working primarily in **React, Node.js, and TypeScript**. The site is a single-page React application that showcases selected projects, technical skills, and ways to get in touch.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's inside
 
-## React Compiler
+- **Projects** — a curated set of work with short write-ups, tech used, and links to code and live demos
+- **Skills** — the languages, frameworks, and tools I work with day to day
+- **About** — background and what I'm looking for next
+- **Contact** — email and links to GitHub and LinkedIn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<!-- Adjust the list above to match your actual sections. -->
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer    | Tools                                                        |
+| -------- | ------------------------------------------------------------ |
+| Frontend | React, TypeScript                                            |
+| Styling  | <!-- e.g. Tailwind CSS / CSS Modules / styled-components --> |
+| Build    | <!-- e.g. Vite / Create React App -->                        |
+| Hosting  | Railway                                                      |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Highlights
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Fully responsive layout, tested across mobile and desktop
+- Fast initial load with a production-optimized build
+- Continuous deployment: every push to `main` deploys automatically via Railway
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<!-- Keep only the bullets that are true for your site, and add anything you're proud of (accessibility work, Lighthouse scores, animations, dark mode, etc.). -->
+
+## Running locally
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+npm install
+npm run dev      # or `npm start`, depending on your setup
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open the URL printed in the terminal (usually `http://localhost:5173` or `http://localhost:3000`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To create a production build:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Contact
+
+- **Email:** <!-- your@email.com -->
+- **LinkedIn:** <!-- https://linkedin.com/in/... -->
+- **GitHub:** <!-- https://github.com/... -->
+
+---
+
+_Built and maintained by Gustavo Garcia._
